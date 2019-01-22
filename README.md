@@ -1,2 +1,7 @@
-# Written-test-for-Full-Stack-Developer-position
-Written test for Bongo’s Full-Stack Developer position in python
+# Instructions
+1. Use python 2.7
+
+# run test file
+python -m unittest test_problem1
+python -m unittest test_problem2
+python -m unittest test_problem3
