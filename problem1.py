@@ -1,5 +1,3 @@
-#Problem 1
-
 a = {
 "key1": 1,
 "key2": {
@@ -15,15 +13,16 @@ a = {
     }
 }
 
-
-
 def findDepth(dictionary, depth =1 ,d = {}):
-    for key, value in dictionary.items():
-        d[key] = depth;
-        if type(value) is dict:
-            findDepth(value, depth+1)
-    return d;
-
+    if type(dictionary) is dict:
+        for key, value in dictionary.items():
+            d[key] = depth;
+            if type(value) is dict:
+                findDepth(value, depth+1)
+        return d;
+    else:
+        raise ValueError("Invalid input")
+    
 def print_depth(data):
     d = findDepth(data)
     for key, value in sorted(d.iteritems(), key=lambda (k,v): (v,k)):
