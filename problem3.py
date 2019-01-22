@@ -54,3 +54,5 @@ def lca(node1,node2):
 print "LCA = %d" %(lca(9, 7)) 
 
 print "LCA = %d" %(lca( 3, 7))
+
+# Runtime Complexity: Time complexity is O(n). The tree is traversed twice, and then path arrays are compared.
